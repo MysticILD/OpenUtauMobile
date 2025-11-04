@@ -26,10 +26,10 @@ jobs:
         run: dotnet restore OpenUtauMobile/OpenUtauMobile.csproj
 
       - name: Build Android Release APK
-        run: dotnet publish OpenUtauMobile/OpenUtauMobile.csproj -c Release -f net9.0-android /p:AndroidPackageFormat=apk
+        run: dotnet publish OpenUtauMobile/OpenUtauMobile.csproj -c Release -f net9.0-android /p:AndroidPackageFormat=apk /p:AndroidCreatePackagePerAbi=false
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: maui-android-apk
-          path: '**/bin/Release/net9.0-android/publish/*.apk'
+          name: OpenUtauMobile-Universal
+          path: OpenUtauMobile/bin/Release/net9.0-android/publish/*.apk
