@@ -1,0 +1,35 @@
+name: Build MAUI Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    name: Build Android APK
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Install MAUI workload
+        run: dotnet workload install maui
+
+      - name: Restore dependencies
+        run: dotnet restore OpenUtauMobile.csproj
+
+      - name: Build Android Release APK
+        run: dotnet publish OpenUtauMobile.csproj -c Release -f net9.0-android /p:AndroidPackageFormat=apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: maui-android-apk
+          path: '**/bin/Release/net9.0-android/publish/*.apk'
