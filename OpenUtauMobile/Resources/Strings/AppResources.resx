@@ -804,4 +804,34 @@ Exception Details:
   <data name="Eraser" xml:space="preserve">
     <value>Eraser</value>
   </data>
+  <data name="DiffSingerSteps" xml:space="preserve">
+    <value>DiffSinger Render Steps for Acoustic Model</value>
+  </data>
+  <data name="DiffSingerStepsVariance" xml:space="preserve">
+    <value>DiffSinger Render Steps for Variance Model</value>
+  </data>
+  <data name="DiffSingerStepsPitch" xml:space="preserve">
+    <value>DiffSinger Render Steps for Pitch Prediction Model</value>
+  </data>
+  <data name="DiffSingerStepsTooltip" xml:space="preserve">
+    <value>Configure DiffSinger render steps for acoustic model. Lower value means faster inference while higher value means higher quality.</value>
+  </data>
+  <data name="DiffSingerStepsVarianceTooltip" xml:space="preserve">
+    <value>Configure DiffSinger render steps for singing style (variance) model. Lower value means faster inference while higher value means higher quality.</value>
+  </data>
+  <data name="DiffSingerStepsPitchTooltip" xml:space="preserve">
+    <value>Configure DiffSinger render steps for pitch prediction model. Lower value means faster inference while higher value means higher quality.</value>
+  </data>
+  <data name="AdditionalSingerPath" xml:space="preserve">
+    <value>Additional Singer Search Paths</value>
+  </data>
+  <data name="AdditionalSingerPathTooltip" xml:space="preserve">
+    <value>Add extra folders for Singer Manager to search singers, so you can extract singer install packages into anywhere you want in External Storage Path.</value>
+  </data>
+  <data name="InstallToAdditionalSingersPath" xml:space="preserve">
+    <value>Install singers to additional singers path</value>
+  </data>
+  <data name="InstallToAdditionalSingersPathTooltip" xml:space="preserve">
+    <value>If enabled, singers will be installed into additional singer path that you set above by default.</value>
+  </data>
 </root>

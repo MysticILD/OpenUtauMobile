@@ -28,8 +28,8 @@
 		<ApplicationId>pers.vocoder712.openutaumobile</ApplicationId>
 
 		<!-- 版本 -->
-		<ApplicationDisplayVersion>1.1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>9</ApplicationVersion>
+		<ApplicationDisplayVersion>1.1.1</ApplicationDisplayVersion>
+		<ApplicationVersion>10</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>None</WindowsPackageType>
@@ -100,6 +100,12 @@
 
 		<!-- 原始资源 Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\Icons\dark\ic_sharp_expand_less_dark.svg" />
+	  <None Remove="Resources\Icons\dark\ic_sharp_expand_more_dark.svg" />
+	  <None Remove="Resources\Icons\light\ic_sharp_expand_less_light.svg" />
+	  <None Remove="Resources\Icons\light\ic_sharp_expand_more_light.svg" />
 	</ItemGroup>
 
 
@@ -210,11 +216,6 @@
 
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
-	</ItemGroup>
-
-
-	<ItemGroup>
 	  <MauiImage Include="Resources\Icons\dark\bxs_rename_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\edit_off_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\edit_pit_dark.svg" />
@@ -225,6 +226,8 @@
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_arrow_forward_ios_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_delete_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_edit_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\ic_sharp_expand_less_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\ic_sharp_expand_more_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_folder_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_folder_open_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_insert_drive_file_dark.svg" />
@@ -252,6 +255,8 @@
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_arrow_forward_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_delete_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_edit_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\ic_sharp_expand_less_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\ic_sharp_expand_more_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_folder_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_folder_open_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_insert_drive_file_light.svg" />

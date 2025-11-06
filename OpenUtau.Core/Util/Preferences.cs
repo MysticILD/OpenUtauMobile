@@ -125,7 +125,7 @@ namespace OpenUtau.Core.Util {
             public bool MainMaximized;
             public bool MidiMaximized;
             public int UndoLimit = 100;
-            public List<string> SingerSearchPaths = new List<string>();
+            public List<string> SingerSearchPaths = new List<string>(); // 应该是废弃了
             public string PlaybackDevice = string.Empty;
             public int PlaybackDeviceNumber;
             public int? PlaybackDeviceIndex;
@@ -143,9 +143,9 @@ namespace OpenUtau.Core.Util {
             public string OnnxRunner = string.Empty;
             public int OnnxGpu = 0;
             public double DiffSingerDepth = 1.0;
-            public int DiffSingerSteps = 20;
-            public int DiffSingerStepsVariance = 20;
-            public int DiffSingerStepsPitch = 10;
+            public int DiffSingerSteps = 2; // 移动端默认2步
+            public int DiffSingerStepsVariance = 2; // 移动端默认2步
+            public int DiffSingerStepsPitch = 1; // 移动端默认1步
             public bool DiffSingerTensorCache = true;
             public bool DiffSingerLangCodeHide = false;
             public bool SkipRenderingMutedTracks = false;
@@ -153,7 +153,7 @@ namespace OpenUtau.Core.Util {
             public string? SortingOrder = null;
             public List<string> RecentFiles = new List<string>();
             public string SkipUpdate = string.Empty;
-            public string AdditionalSingerPath = string.Empty;
+            public string AdditionalSingerPath = string.Empty; // 额外歌手路径
             public bool InstallToAdditionalSingersPath = true;
             public bool LoadDeepFolderSinger = true;
             public bool PreferCommaSeparator = false;
