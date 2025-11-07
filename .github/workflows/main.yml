@@ -1,4 +1,4 @@
-name: Build MAUI Android APK
+name: Build OpenUtau Mobile
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: OpenUtauMobile-Universal
-          path: OpenUtauMobile/bin/Release/net9.0-android/publish/*.apk
+          path: OpenUtauMobile/bin/Release/net9.0-android/publish/*-Signed.apk
