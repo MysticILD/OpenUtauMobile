@@ -21,6 +21,7 @@
     <Color x:Key="SingerCardBackground">#11000000</Color>
     <Color x:Key="Handle">#c0c0c0</Color>
     <Color x:Key="HandleGrain">#f0f0f0</Color>
+    <Color x:Key="SecondaryTextColor">#555555</Color>
 
 
     <FileImageSource x:Key="file" File="ic_sharp_insert_drive_file_light.png"></FileImageSource>
@@ -52,4 +53,9 @@
     <FileImageSource x:Key="phonemizer" File="phonemizer_light.png"></FileImageSource>
     <FileImageSource x:Key="expand-more" File="ic_sharp_expand_more_light.png"></FileImageSource>
     <FileImageSource x:Key="expand-less" File="ic_sharp_expand_less_light.png"></FileImageSource>
+    <FileImageSource x:Key="select" File="icon_select_light.png"></FileImageSource>
+    <FileImageSource x:Key="copy" File="icon_copy_light.png"></FileImageSource>
+    <FileImageSource x:Key="paste" File="icon_paste_light.png"></FileImageSource>
+    <FileImageSource x:Key="selectall" File="icon_selectall_light.png"></FileImageSource>
+    <FileImageSource x:Key="extension" File="ic_sharp_extension_light.png"></FileImageSource>
 </ResourceDictionary>

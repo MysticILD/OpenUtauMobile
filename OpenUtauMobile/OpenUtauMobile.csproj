@@ -28,8 +28,8 @@
 		<ApplicationId>pers.vocoder712.openutaumobile</ApplicationId>
 
 		<!-- 版本 -->
-		<ApplicationDisplayVersion>1.1.1</ApplicationDisplayVersion>
-		<ApplicationVersion>10</ApplicationVersion>
+		<ApplicationDisplayVersion>1.1.6</ApplicationDisplayVersion>
+		<ApplicationVersion>15</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>None</WindowsPackageType>
@@ -86,7 +86,7 @@
 	<!-- 资源 -->
 	<ItemGroup>
 		<!-- 应用图标 -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#ffffff" BaseSize="160,160" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.4" BaseSize="256,256" />
 
 		<!-- 开屏图片 -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" BaseSize="256,256" Color="#ffffff" />
@@ -102,10 +102,14 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	  <None Remove="Resources\Icons\dark\ic_sharp_expand_less_dark.svg" />
 	  <None Remove="Resources\Icons\dark\ic_sharp_expand_more_dark.svg" />
+	  <None Remove="Resources\Icons\dark\ic_sharp_extension_dark.svg" />
 	  <None Remove="Resources\Icons\light\ic_sharp_expand_less_light.svg" />
 	  <None Remove="Resources\Icons\light\ic_sharp_expand_more_light.svg" />
+	  <None Remove="Resources\Icons\light\ic_sharp_extension_light.svg" />
 	</ItemGroup>
 
 
@@ -143,14 +147,9 @@
 	    <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
 	  </Compile>
 	  <Compile Update="Resources\Strings\AppResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
 	    <DependentUpon>AppResources.resx</DependentUpon>
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	  </Compile>
-	  <Compile Update="Resources\Strings\AppResources.en.Designer.cs">
-	    <DependentUpon>AppResources.en.resx</DependentUpon>
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
 	  </Compile>
 	  <Compile Update="Views\Controls\ChooseTrackColorPopup.xaml.cs">
 	    <DependentUpon>ChooseTrackColorPopup.xaml</DependentUpon>
@@ -160,6 +159,9 @@
 	  </Compile>
 	  <Compile Update="Views\Controls\EditBeatPopup.xaml.cs">
 	    <DependentUpon>EditBeatPopup.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Controls\LoadingPopup.xaml.cs">
+	    <DependentUpon>LoadingPopup.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Controls\SelectPhonemizerPopup.xaml.cs">
 	    <DependentUpon>SelectPhonemizerPopup.xaml</DependentUpon>
@@ -200,6 +202,9 @@
 	  <Compile Update="Views\SettingsPage.xaml.cs">
 	    <DependentUpon>SettingsPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\DependencyManagePage.xaml.cs">
+	    <DependentUpon>DependencyManagePage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 
@@ -228,6 +233,7 @@
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_edit_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_expand_less_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_expand_more_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\ic_sharp_extension_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_folder_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_folder_open_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\ic_sharp_insert_drive_file_dark.svg" />
@@ -245,6 +251,11 @@
 	  <MauiImage Include="Resources\Icons\dark\ph_wave_sine_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\tabler_magnet_dark.svg" />
 	  <MauiImage Include="Resources\Icons\dark\tabler_magnet_off_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\icon_select_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\icon_copy_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\icon_paste_dark.svg" />
+	  <MauiImage Include="Resources\Icons\dark\icon_selectall_dark.svg" />
+
 	  <MauiImage Include="Resources\Icons\light\bxs_rename_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\edit_off_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\edit_pit_light.svg" />
@@ -257,6 +268,7 @@
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_edit_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_expand_less_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_expand_more_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\ic_sharp_extension_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_folder_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_folder_open_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\ic_sharp_insert_drive_file_light.svg" />
@@ -274,6 +286,11 @@
 	  <MauiImage Include="Resources\Icons\light\ph_wave_sine_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\tabler_magnet_light.svg" />
 	  <MauiImage Include="Resources\Icons\light\tabler_magnet_off_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\icon_select_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\icon_copy_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\icon_paste_light.svg" />
+	  <MauiImage Include="Resources\Icons\light\icon_selectall_light.svg" />
+
 	  <MauiImage Include="Resources\Icons\openutau.svg" />
 	</ItemGroup>
 
@@ -315,6 +332,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Controls\EditBeatPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Controls\LoadingPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Controls\SelectPhonemizerPopup.xaml">
@@ -372,6 +392,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SingerDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DependencyManagePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SingerManagePage.xaml">

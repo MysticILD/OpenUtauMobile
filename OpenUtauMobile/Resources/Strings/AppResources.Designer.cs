@@ -88,7 +88,7 @@ namespace OpenUtauMobile.Resources.Strings {
         }
         
         /// <summary>
-        ///   查找类似 Add extra folders for Singer Manager to search singers, so you can extra singer install packages into anywhere you want in External Storage Path. 的本地化字符串。
+        ///   查找类似 Add extra folders for Singer Manager to search singers, so you can extract singer install packages into anywhere you want in External Storage Path. 的本地化字符串。
         /// </summary>
         internal static string AdditionalSingerPathTooltip {
             get {
@@ -129,6 +129,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string AppRuntimeException {
             get {
                 return ResourceManager.GetString("AppRuntimeException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The imported project contains the following tempo markers. Do you want to use them? 的本地化字符串。
+        /// </summary>
+        internal static string AskIfImportTempo {
+            get {
+                return ResourceManager.GetString("AskIfImportTempo", resourceCulture);
             }
         }
         
@@ -318,6 +327,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string CopyErrorMessage {
             get {
                 return ResourceManager.GetString("CopyErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Dependency Management 的本地化字符串。
+        /// </summary>
+        internal static string DependencyManagement {
+            get {
+                return ResourceManager.GetString("DependencyManagement", resourceCulture);
             }
         }
         
@@ -679,6 +697,15 @@ namespace OpenUtauMobile.Resources.Strings {
         }
         
         /// <summary>
+        ///   查找类似 Importing Tracks 的本地化字符串。
+        /// </summary>
+        internal static string ImportTracksCaption {
+            get {
+                return ResourceManager.GetString("ImportTracksCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Please select the correct project file. 的本地化字符串。
         /// </summary>
         internal static string IncorrectProjectFileToast {
@@ -819,6 +846,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string InstallationDirectoryText {
             get {
                 return ResourceManager.GetString("InstallationDirectoryText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Installation failed! 的本地化字符串。
+        /// </summary>
+        internal static string InstallationFailed {
+            get {
+                return ResourceManager.GetString("InstallationFailed", resourceCulture);
             }
         }
         
@@ -1066,6 +1102,15 @@ namespace OpenUtauMobile.Resources.Strings {
         }
         
         /// <summary>
+        ///   查找类似 Loading 的本地化字符串。
+        /// </summary>
+        internal static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Load Pitch Rendering Result 的本地化字符串。
         /// </summary>
         internal static string LoadPitchRenderingResult {
@@ -1188,6 +1233,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string NoColorsAvailable {
             get {
                 return ResourceManager.GetString("NoColorsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 No dependencies have been installed yet. Click &quot;+&quot; to install from a file. 的本地化字符串。
+        /// </summary>
+        internal static string NoDependencyPrompt {
+            get {
+                return ResourceManager.GetString("NoDependencyPrompt", resourceCulture);
             }
         }
         
@@ -1561,6 +1615,24 @@ namespace OpenUtauMobile.Resources.Strings {
         }
         
         /// <summary>
+        ///   查找类似 Are you sure you want to remove dependency {0}? 的本地化字符串。
+        /// </summary>
+        internal static string RemoveDependencyPrompt {
+            get {
+                return ResourceManager.GetString("RemoveDependencyPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remove Dependency 的本地化字符串。
+        /// </summary>
+        internal static string RemoveDependencyTitle {
+            get {
+                return ResourceManager.GetString("RemoveDependencyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Remove Singer 的本地化字符串。
         /// </summary>
         internal static string RemoveSinger {
@@ -1593,6 +1665,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string RemoveSingerSuccessToast {
             get {
                 return ResourceManager.GetString("RemoveSingerSuccessToast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Removing Dependency {0} 的本地化字符串。
+        /// </summary>
+        internal static string RemovingDependencyMessage {
+            get {
+                return ResourceManager.GetString("RemovingDependencyMessage", resourceCulture);
             }
         }
         
@@ -1719,6 +1800,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string SaveText {
             get {
                 return ResourceManager.GetString("SaveText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select an Expression 的本地化字符串。
+        /// </summary>
+        internal static string SelectExpression {
+            get {
+                return ResourceManager.GetString("SelectExpression", resourceCulture);
             }
         }
         
@@ -1944,6 +2034,15 @@ namespace OpenUtauMobile.Resources.Strings {
         internal static string StringPressBackAgainToExit {
             get {
                 return ResourceManager.GetString("StringPressBackAgainToExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Successfully deleted! 的本地化字符串。
+        /// </summary>
+        internal static string SuccessfullyDeleted {
+            get {
+                return ResourceManager.GetString("SuccessfullyDeleted", resourceCulture);
             }
         }
         
