@@ -34,7 +34,7 @@ namespace OpenUtau.Classic {
         }
 
         IResampler LoadResampler(string filePath, string basePath) {
-            if (!File.Exists(filePath)) {
+            if (OS.IsIOS() || !File.Exists(filePath)) {
                 return null;
             }
             string ext = Path.GetExtension(filePath).ToLower();
@@ -48,7 +48,7 @@ namespace OpenUtau.Classic {
         }
 
         IWavtool LoadWavtool(string filePath, string basePath) {
-            if (!File.Exists(filePath)) {
+            if (OS.IsIOS() || !File.Exists(filePath)) {
                 return null;
             }
             string ext = Path.GetExtension(filePath).ToLower();

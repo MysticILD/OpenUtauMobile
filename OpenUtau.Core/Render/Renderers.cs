@@ -72,10 +72,11 @@ namespace OpenUtau.Core.Render {
         public static string[] GetSupportedRenderers(USingerType singerType) {
             var builtin = GetBuiltinSupportedRenderers(singerType);
             var external = GetExternalSupportedRenderers(singerType);
-            if (external.Length == 0) {
-                return builtin;
+            var supported = external.Length == 0 ? builtin : builtin.Concat(external).ToArray();
+            if (OS.IsIOS()) {
+                return supported.Where(renderer => renderer != ENUNU && renderer != VOICEVOX).ToArray();
             }
-            return builtin.Concat(external).ToArray();
+            return supported;
         }
 
         static string[] GetBuiltinSupportedRenderers(USingerType singerType) {
@@ -112,7 +113,18 @@ namespace OpenUtau.Core.Render {
             if (singerType == USingerType.Classic && classicRenderers.Contains(Preferences.Default.DefaultRenderer)) {
                 return Preferences.Default.DefaultRenderer;
             } else {
-                return GetSupportedRenderers(singerType)[0];
+                string[] supported = GetSupportedRenderers(singerType);
+                if (supported.Length > 0) {
+                    return supported[0];
+                }
+                // 在 iOS 上保留旧工程中的渲染器标识，但不将本地服务引擎作为可选项。
+                if (OS.IsIOS() && singerType == USingerType.Enunu) {
+                    return ENUNU;
+                }
+                if (OS.IsIOS() && singerType == USingerType.Voicevox) {
+                    return VOICEVOX;
+                }
+                return supported[0];
             }
         }
 
